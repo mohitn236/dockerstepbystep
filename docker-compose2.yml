@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    image: myapp2  # Replace with the actual Docker image name
+    container_name: myapp2  # Replace with the desired container name
+    ports:
+      - "8080:8080"  
+    volumes:
+      - "./app_data:/var/app_data" 
+    environment:
+      - ENV_VAR_1=value1  
+      - ENV_VAR_2=value2
+    restart: unless-stopped
